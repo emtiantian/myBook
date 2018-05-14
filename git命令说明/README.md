@@ -4,3 +4,5 @@
 > 添加所有没有加入索引的文件
 ##`git commit -m `
 >提交所有现在保存的索引
+## `git push origin master`
+>提交到远程仓库
