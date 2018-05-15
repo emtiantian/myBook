@@ -1,5 +1,5 @@
-##linux常用命令  
-###vim  
+## linux常用命令  
+### vim  
 `vim xx.conf`              
 >vim 打开文件  
 
