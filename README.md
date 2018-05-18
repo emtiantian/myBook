@@ -3,6 +3,6 @@
 ## sublinmeText3 配置markdown方法
 ## git 命令行操作
 ## linux 常用命令 
-[linux 常用命令](linux 常用命令/README.md)
+[linux 常用命令](https://github.com/emtiantian/myBook/linux 常用命令/README.md)
 ## License   
 [MIT](LICENSE)
