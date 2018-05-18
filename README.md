@@ -2,4 +2,6 @@
 ## apache+tomcat 配置集群
 ## sublinmeText3 配置markdown方法
 ## git 命令行操作
-## linux 常用命令
+## [linux 常用命令](./linux 常用命令/README.md)
+##License
+[MIT](LICENSE)
