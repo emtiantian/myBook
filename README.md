@@ -9,3 +9,5 @@
 [linux常用命令](linux常用命令/README.md)
 ## License   
 [MIT](LICENSE)
+## es6 内容
+[es6私有变量和私有方法](es6/es6-private.md)
