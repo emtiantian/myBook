@@ -1,6 +1,8 @@
 # 记录有用的内容制作成为自己的电子书
 ## apache+tomcat 负载均衡
-[负载均衡](负债均衡/README.md)
+[负载均衡](服务器配置相关/负载均衡配置.md)
+## nginx转发
+[nginx转发](服务器配置相关/nginx转发配置说明.md)
 ## sublinmeText3 配置markdown方法
 [sublime安装markdown](sublime安装markdown/README.md)
 ## git 常用命令   
