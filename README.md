@@ -15,6 +15,9 @@
 [编译安装nginx并配置负载均衡](服务器配置相关/编译安装nginx并配置负载均衡.md)  
 
 
+## TODO
+[nginx进阶](https://huoding.com/2012/08/31/156)
+[传说中的亿级流量网站？](http://jinnianshilongnian.iteye.com/blog/2186448)
 
 ## License   
 [MIT](LICENSE)

@@ -1,4 +1,5 @@
-### 编译安装nginx并配置负载均衡
+
+## 编译安装nginx并配置负载均衡
 1. 下载安装nginx
 2. 解压nginx `tar -zxvf nginx-1.11.6.tar.gz`
 3. 进入解压目录执行`./configure`（非阿里云需要自己安装gcc编译程序`yum install gcc-c++`）
@@ -60,7 +61,15 @@
 
 7. nginx 的session共享 
 
-     + 
+     + 使用cookie储存session（代码部分配置和修改）（而且不安全cookie会被伪造）
+     + 使用数据库储存session (代码改动)（加大了数据库负担，切同步时间较慢）
+     + 使用memcache或redis (代码改动)（速度快，但是有内存压力，内存不足会溢出）
+     + nginx的ip_hash (nginx改动) （使用ip做hash来分配用户到固定机器）   
+     >有3个弊端:   
+     nginx服务器要在最前端能够获取真实ip,    
+     nginx分发之后不能再次分发否则session不起作用,    
+     如果大量用户在同一局域网访问负载均衡失效
+     + upstream_hash (nginx改动)（第三方模块）（和ip_hash差不多只是更改做hash的参数）
 
 8. 参考链接 
 > [nginx在linux上的编译安装](https://blog.csdn.net/w410589502/article/details/70787468)   
@@ -69,8 +78,8 @@
 [nginx+tomcat负载均衡配置](https://www.cnblogs.com/007sx/p/6917155.html)   
 [nginx负载均衡一致性哈希](https://blog.csdn.net/zhangskd/article/details/50256111)  
 [nginx负载均衡配置](https://blog.csdn.net/xyang81/article/details/51702900)   
-
-
+[nginx和apache的比较](https://www.oschina.net/question/565065_77181)
+[nginx的session共享问题](http://blog.51cto.com/815632410/1569828)
 
 
 
