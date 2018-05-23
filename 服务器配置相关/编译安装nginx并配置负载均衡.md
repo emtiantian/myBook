@@ -1,45 +1,19 @@
-## linux常用命令  
-### vim  
-`vim xx.conf`              
->vim 打开文件  也可以作为新建
-
-`esc + :q!`  
->不保存退出  
-
-`esc +:wq` 
->保存退出  
-
-`p`  
->粘贴剪贴板内容 
-
-`/xxx ?xxx`  
->搜索  
-
-`dd`  
->删除当前行  
-
-`v + y`  
->v进入复制页面 y复制所选行  
-
-### 文件相关
-`stat`
->显示文件详细修改信息
-
-`scp -v filenginx-1.14.0.tar.gz root_name@ip:dir `
->远程传输本地文件到linux服务器
-
-`tar -zxvf /tmp/etc.tar.gz`
->解压到程序压缩包到当前目录
-
-### 查看系统版本
-`lsb_release -a`
->显示当前linux 的系统信息
-
-### 编译安装nginx
+### 编译安装nginx并配置负载均衡
 1. 下载安装nginx
 2. 解压nginx `tar -zxvf nginx-1.11.6.tar.gz`
 3. 进入解压目录执行`./configure`（非阿里云需要自己安装gcc编译程序`yum install gcc-c++`）
-4. 查看缺少的组件一般缺少（pcre，pcre-devel，zlib，zlib-devel，openssl ，openssl-devel）安装示例：`yum install -y openssl openssl-devel`
+4. 查看缺少的组件一般缺少（pcre，pcre-devel，zlib，zlib-devel，openssl ，openssl-devel）   
+  安装示例：`yum install -y openssl openssl-devel`（阿里云上的安装方式）   
+  或者源码编译安装，安装示例：
+
+        ./configure --prefix=/usr/local/nginx --with-zlib=../zlib-1.2.8 --with-pcre=../pcre-8.36   
+        make    
+        sudo make install
+        #如果新加模块
+        ./configure –add-module=/data/software/ngx_http_google_filter_module
+        make 自动替换原来的nginx二进制
+        #查看已经编译的模块 V是大写的
+        nginx -V 
 
 
 5. 默认安装位置

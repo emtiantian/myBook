@@ -10,7 +10,9 @@
 ## linux 常用命令  
 [linux常用命令](linux常用命令/README.md)
 ## es6 内容
-[es6私有变量和私有方法](js部分/es6-private.md)   
+[es6私有变量和私有方法](js部分/es6-private.md) 
+## 编译安装nginx并配置负载均衡
+[编译安装nginx并配置负载均衡](服务器配置相关/编译安装nginx并配置负载均衡.md)  
 
 
 
