@@ -19,6 +19,6 @@ git config --global core.safecrlf true
 完美解决
 
 ### 参考
-[](link)
-[](link)
-[](link)
+[git上的办法](https://github.com/vigente/gerardus/wiki/Integrate-git-diffs-with-word-docx-files)
+[详细的说明和解决办法](https://github.com/cssmagic/blog/issues/22)
+[详细的说明和解决办法](https://www.cnblogs.com/flying_bat/archive/2013/09/16/3324769.html)

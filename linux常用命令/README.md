@@ -47,4 +47,30 @@
 `curl -L http://xxxx`
 >curl执行时遇到跳转 加-L参数
 
+### 定时任务
+`crontab -e`
+>编辑命令或者执行命令脚本    
+
+格式示例:   
+
+    # Example of job definition: 　　　　　　　　　#  计划任务书写格式
+    # .---------------- minute (0 - 59)   　　
+    # |  .------------- hour (0 - 23)
+    # |  |  .---------- day of month (1 - 31)
+    # |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+    # |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+    # |  |  |  |  |
+    # *  *  *  *  * user-name command to be executed
+
+` 0 23 * * * /opt/gitlab/bin/gitlab-rake gitlab:backup:create >> /var/opt/gitlab/backups/backup.log 2>&1`
+
+### 设置路由规则 
+
+
+
+
+
+
+
+
 
