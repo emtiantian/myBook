@@ -21,6 +21,18 @@
 `v + y`  
 >v进入复制页面 y复制所选行  
 
+`$`
+>行末
+
+`0`
+>行首
+
+`ctrl + G`
+>显示当前行
+
+`n+G`
+>跳转到第n行    
+
 ### 文件相关
 `stat`
 >显示文件详细修改信息
@@ -65,7 +77,10 @@
 ` 0 23 * * * /opt/gitlab/bin/gitlab-rake gitlab:backup:create >> /var/opt/gitlab/backups/backup.log 2>&1`
 
 ### 设置路由规则 
+对双网卡上网的linux机器除了设置2个ip和一个网关外 还需要配置路由表
+命令有2种 net-tools系列 和 iproute2系列 推荐使用 iproute2 系列命令（linux发行版基本预装过）
 
+`ip route`
 
 
 
