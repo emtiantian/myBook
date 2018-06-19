@@ -8,8 +8,8 @@
 ## git   
 [git常用命令](git/README.md)    
 [git换行符问题及解决办法](git/git换行符问题.md)   
-[git服务部署](git/git服务部署.md) 
-[gitlab备份设置](git/gitlab备份设置.md)   
+[常见git相关软件和网站](git/常见git相关软件和网站.md)    
+[gitlab备份设置](git/gitlab备份设置.md)     
 ## linux 常用命令  
 [linux常用命令](linux常用命令/README.md)
 ## es6 内容
@@ -28,9 +28,8 @@
  
 git各种软件的说明   
 [chrome查看内存泄漏](link)    
-[gitlib-server部署 docker版](https://docs.gitlab.com/ee/install/docker.html)   
-[GitLib windows?](https://docs.bitnami.com/general/apps/gitlab/#application-first-steps)   
 [windowsinfoGage配置](link)    
-windows 相关服务器计划任务    
+windows 相关服务器计划任务
+    
 ## License   
 [MIT](LICENSE)

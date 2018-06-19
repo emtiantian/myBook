@@ -87,7 +87,8 @@
 >为 wlan0 设置ip为 192.168.0.193 子网掩码为 24（255.255.255.0）   
 >删除示例: ip addr del 192.168.0.193/24 dev wlan0 
 
-``
+`sudo ip route add 172.1.25.0/24 via 172.1.27.254 dev em1`
+>为 172.1.25网段设置 网关为 172.1.27.254  默认出口为em1
 
 [ip route 详细说明](http://www.mamicode.com/info-detail-1412618.html)   
 [ip route 高级设置](https://www.cnblogs.com/taosim/articles/4444887.html)

@@ -11,7 +11,8 @@
                 # 备份每天23点备份并写入log日志
                 0 23 * * * /opt/gitlab/bin/gitlab-rake gitlab:backup:create >> /var/opt/gitlab/backups/backup.log 2>&1
 
-3. 修改备份目录权限 （默认路径：`/var/opt/gitlab/backups`）   
+3. 修改备份目录权限 （默认路径：`/var/opt/gitlab/backups`）    
+  （<span style="color: red">设置了也没有用,需要用root用户登录</span>）  
     `cd /var/opt/gitlab/ `   
     `chmod 777 backups/`    
 
