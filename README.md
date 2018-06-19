@@ -6,9 +6,10 @@
 ## sublinmeText3 配置markdown方法
 [sublime安装markdown](sublime安装markdown/README.md)
 ## git   
-[git常用命令](git/README.md)
-[git换行符问题及解决办法](git/git换行符问题.md)
+[git常用命令](git/README.md)    
+[git换行符问题及解决办法](git/git换行符问题.md)   
 [git服务部署](git/git服务部署.md) 
+[gitlab备份设置](git/gitlab备份设置.md)   
 ## linux 常用命令  
 [linux常用命令](linux常用命令/README.md)
 ## es6 内容
@@ -24,9 +25,8 @@
 ## TODO
 [nginx进阶](https://huoding.com/2012/08/31/156)
 [传说中的亿级流量网站？](http://jinnianshilongnian.iteye.com/blog/2186448)
-[git服务部署](git/git服务部署.md) 
+ 
 git各种软件的说明
-还有备份
 [chrome查看内存泄漏](link)
 [gitlib-server部署 docker版](https://docs.gitlab.com/ee/install/docker.html)
 [GitLib windows?](https://docs.bitnami.com/general/apps/gitlab/#application-first-steps)

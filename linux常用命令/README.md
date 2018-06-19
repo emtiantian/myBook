@@ -79,8 +79,55 @@
 ### 设置路由规则 
 对双网卡上网的linux机器除了设置2个ip和一个网关外 还需要配置路由表
 命令有2种 net-tools系列 和 iproute2系列 推荐使用 iproute2 系列命令（linux发行版基本预装过）
+ 
+`ip route show` 或 `ip route`
+>列出当前路由表
 
-`ip route`
+`ip addr add 192.168.0.193/24 dev wlan0`
+>为 wlan0 设置ip为 192.168.0.193 子网掩码为 24（255.255.255.0）   
+>删除示例: ip addr del 192.168.0.193/24 dev wlan0 
+
+``
+
+[ip route 详细说明](http://www.mamicode.com/info-detail-1412618.html)   
+[ip route 高级设置](https://www.cnblogs.com/taosim/articles/4444887.html)
+
+### 修改文件或文件夹权限
+
+`chmod 777`
+>修改 第一个7:文件拥有者 第2个7:同组用户 第三个7:其他人访问权限   
+>单独一个7 其实是二进制 111 的表述    
+>第一个1：读文件或读取文件夹目录    
+>第二个1：写权限新增修改文件或删除移动文件夹   
+>第三个1：执行文件权限或进入文件夹权限
+
+### 修改文件夹或文件拥有者
+`chown`
+>修改文件或者文件夹的拥有者
+>chown -R admin /opt/nginx
+ 
++ user : 新的档案拥有者的使用者 ID
++ group : 新的档案拥有者的使用者群体(group)
++ -c : 若该档案拥有者确实已经更改，才显示其更改动作
++ -f : 若该档案拥有者无法被更改也不要显示错误讯息
++ -h : 只对于连结(link)进行变更，而非该 link 真正指向的档案
++ -v : 显示拥有者变更的详细资料
++ -R : 对目前目录下的所有档案与子目录进行相同的拥有者变更(即以递回的方式逐个变更)
++ –help : 显示辅助说明
++ –version : 显示版本
+
+### ssh 免密登录
+
+`scp ./id_rsa.pub root@A服务器ip:~/.ssh/id_rsa.pub_temp` 
+>将生成的公钥文件id_rsa.pub复制到A服务器上，并改名（避免覆盖A服务器上的公钥） 
+`cat id_rsa.pub_temp >> authorized_keys `
+>将刚才复制过来的公钥信息追加到文件authorized_keys文件（追加的意义是避免覆盖其他公钥信息，如果没有这个文件系统会自动创建） 
+
+
+
+
+
+
 
 
 

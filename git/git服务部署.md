@@ -1,5 +1,5 @@
 ## git服务部署
-### 先讲讲常见git相关软件
+### 先讲讲常见git相关软件和网站
 1. [GitHub](https://github.com/)
 2. [git](https://git-scm.com/)
 3. [](link)
