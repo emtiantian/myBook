@@ -23,14 +23,14 @@
 
 
 ## TODO
-[nginx进阶](https://huoding.com/2012/08/31/156)
-[传说中的亿级流量网站？](http://jinnianshilongnian.iteye.com/blog/2186448)
+[nginx进阶](https://huoding.com/2012/08/31/156)   
+[传说中的亿级流量网站？](http://jinnianshilongnian.iteye.com/blog/2186448)   
  
-git各种软件的说明
-[chrome查看内存泄漏](link)
-[gitlib-server部署 docker版](https://docs.gitlab.com/ee/install/docker.html)
-[GitLib windows?](https://docs.bitnami.com/general/apps/gitlab/#application-first-steps)
-[windowsinfoGage配置](link)
-windows 相关服务器计划任务
+git各种软件的说明   
+[chrome查看内存泄漏](link)    
+[gitlib-server部署 docker版](https://docs.gitlab.com/ee/install/docker.html)   
+[GitLib windows?](https://docs.bitnami.com/general/apps/gitlab/#application-first-steps)   
+[windowsinfoGage配置](link)    
+windows 相关服务器计划任务    
 ## License   
 [MIT](LICENSE)
