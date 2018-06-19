@@ -17,19 +17,16 @@
 ## 编译安装nginx并配置负载均衡
 [编译安装nginx并配置负载均衡](服务器配置相关/编译安装nginx并配置负载均衡.md)
 ## windows 相关
-服务器计划任务
-
+[服务器计划任务](windows常用命令/计划任务的问题.md)
 
 
 
 ## TODO
 [nginx进阶](https://huoding.com/2012/08/31/156)   
 [传说中的亿级流量网站？](http://jinnianshilongnian.iteye.com/blog/2186448)   
- 
-git各种软件的说明   
 [chrome查看内存泄漏](link)    
 [windowsinfoGage配置](link)    
-windows 相关服务器计划任务
-    
+windows 相关服务器计划任务   
+
 ## License   
 [MIT](LICENSE)
