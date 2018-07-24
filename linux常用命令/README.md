@@ -88,6 +88,7 @@
 >删除示例: ip addr del 192.168.0.193/24 dev wlan0 
 
 `sudo ip route add 172.1.25.0/24 via 172.1.27.254 dev em1`
+`sudo ip route add 10.168.1.0/24 via 192.168.100.254 dev em2`
 >为 172.1.25网段设置 网关为 172.1.27.254  默认出口为em1
 
 [ip route 详细说明](http://www.mamicode.com/info-detail-1412618.html)   
@@ -116,6 +117,16 @@
 + -R : 对目前目录下的所有档案与子目录进行相同的拥有者变更(即以递回的方式逐个变更)
 + –help : 显示辅助说明
 + –version : 显示版本
++ 
+
+### 查看硬盘使用情况和文件夹大小
+
+#### 查看磁盘用量
+1. `df -lh `
+
+#### 查看文件夹大小并排序
+1. `du -s * | sort -nr  ` 
+2. `du -s * | sort -nr  | head`  取前10个
 
 ### ssh 免密登录
 
@@ -124,9 +135,9 @@
 `cat id_rsa.pub_temp >> authorized_keys `
 >将刚才复制过来的公钥信息追加到文件authorized_keys文件（追加的意义是避免覆盖其他公钥信息，如果没有这个文件系统会自动创建） 
 
-
-
-
+### 查看进程及端口占用
+1. `ps -ef | grep java` 查看进程占用
+2. `netstat –apn` 查看进程占用端口
 
 
 
