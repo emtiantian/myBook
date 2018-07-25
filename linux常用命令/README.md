@@ -123,6 +123,8 @@
 
 #### 查看磁盘用量
 1. `df -lh `
+2. <p style="color:red"> 如果linux中df和du命令对比出来的磁盘大小不一致，</p>
+<p style="color:red">估计是删除文件但是进程没有销毁文件仍然存在，需要重启系统可以解决</p>
 
 #### 查看文件夹大小并排序
 1. `du -s * | sort -nr  ` 
@@ -131,7 +133,8 @@
 ### ssh 免密登录
 
 `scp ./id_rsa.pub root@A服务器ip:~/.ssh/id_rsa.pub_temp` 
->将生成的公钥文件id_rsa.pub复制到A服务器上，并改名（避免覆盖A服务器上的公钥） 
+>将生成的公钥文件id_rsa.pub复制到A服务器上，并改名（避免覆盖A服务器上的公钥）   
+     
 `cat id_rsa.pub_temp >> authorized_keys `
 >将刚才复制过来的公钥信息追加到文件authorized_keys文件（追加的意义是避免覆盖其他公钥信息，如果没有这个文件系统会自动创建） 
 

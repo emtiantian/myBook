@@ -33,3 +33,10 @@
 > 停止 nginx -s stop 
 > 重新加载配置文件启动 nginx -s reload 
 > 注： 可能需要管理员权限
+
+4. nginx 设置最大文件设置
+> ` client_max_body_size 20M;`
+5. nginx 设置超时时间
+>        proxy_connect_timeout 600s;
+>        proxy_send_timeout 600s;
+>        proxy_read_timeout 600s;
