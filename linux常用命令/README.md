@@ -142,6 +142,9 @@
 1. `ps -ef | grep java` 查看进程占用
 2. `netstat –apn` 查看进程占用端口
 
+### linux 重启
+`shutdown -r 1`
+> 1分钟之后重启
 
 
 
