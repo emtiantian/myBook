@@ -26,7 +26,7 @@
 [传说中的亿级流量网站？](http://jinnianshilongnian.iteye.com/blog/2186448)   
 [chrome查看内存泄漏](link)    
 [windowsinfoGage配置](link)    
-windows 相关服务器计划任务   
+http 缓存机制
 
 ## License   
 [MIT](LICENSE)
