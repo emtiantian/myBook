@@ -1,5 +1,9 @@
 ## vue+typescript
 ### vue 
+1. directive 和 $emit 的区别 是directive 是自定义真实dom的响应事件，$emit是定义在虚拟中
+2. 
+2. 
+
 
 ### typescript
 1. `private num !: number` 这里`!:`表示这个变量是必须的
@@ -56,7 +60,7 @@
 
 5.  token 续1s
 > access toekn 是用户凭证
-> refines token （保存在数据库中？ 参考https://auth0.com/docs/tokens/refresh-token/current）
+> refines token （保存在数据库中？ 参考[auth0-refines token](https://auth0.com/docs/tokens/refresh-token/current)）
 
 
 
