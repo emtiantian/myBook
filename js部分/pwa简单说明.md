@@ -93,7 +93,7 @@
 
 ### 相关链接
 [纸质书籍介绍](https://github.com/SangKa/PWA-Book-CN)
-
+[最佳实践及博客转变模式](https://lzw.me/a/pwa-service-worker.html)
 
 
 
