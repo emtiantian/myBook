@@ -1,8 +1,20 @@
 ## vue+typescript
 ### vue 
-1. directive 和 $emit 的区别 是directive 是自定义真实dom的响应事件，$emit是定义在虚拟中
-2. 
-2. 
++ directive 和 $emit 的区别 是directive 是自定义真实dom的响应事件，$emit是定义在虚拟中
++ vue动态添加路由不能添加已有路由的子选项<span style="color: red">存疑</span>
++ vue 删除路由后 实际路由还在必须刷新页面才可以
+
+### tslint
+`/ tslint:disable /——忽略该行以下所有代码出现的错误提示`
+
+`/ tslint:enable /——当前ts文件重新启用tslint`
+
+`// tslint:disable-line——忽略当前行代码出现的错误提示`
+
+`// tslint:disable-next-line——忽略下一行代码出现的错误提示`
+### 组件相关
++ css添加模块化 在style 上写scoped 即开启模块化
++ 
 
 
 ### typescript
