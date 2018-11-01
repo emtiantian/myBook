@@ -3,8 +3,12 @@
 + directive 和 $emit 的区别 是directive 是自定义真实dom的响应事件，$emit是定义在虚拟中
 + vue动态添加路由不能添加已有路由的子选项<span style="color: red">存疑</span>
 + vue 删除路由后 实际路由还在必须刷新页面才可以
++ vue scoped模块化css 只会影响vue创建的dom结构 
+完美解决办法为使用深度作用选择器： `>>>`或`/deep/`
+也可以使用全局css 即css不添加scoped
++
 
-### tslint
+### tslint && tsconfig
 `/ tslint:disable /——忽略该行以下所有代码出现的错误提示`
 
 `/ tslint:enable /——当前ts文件重新启用tslint`
@@ -12,8 +16,13 @@
 `// tslint:disable-line——忽略当前行代码出现的错误提示`
 
 `// tslint:disable-next-line——忽略下一行代码出现的错误提示`
+
+`"outDir": "temp/",` 修改ts编译文件和source-map文件地址
+
 ### 组件相关
 + css添加模块化 在style 上写scoped 即开启模块化
++ 数据驱动的具体实现
++ 组件边界
 + 
 
 
@@ -21,7 +30,8 @@
 1. `private num !: number` 这里`!:`表示这个变量是必须的
 2. `private num ?: number` 这里`?:`表示这个变量不是是须的
 3. 忽略ts某些错误 `// @ts-ignore：`
-4. 
+4. d.ts 文件只是一个解释文件不能参与运行所以其中的枚举值不能使用到ts文件中
+5. 
 
 ### jwt
 1. 常用payload包含
