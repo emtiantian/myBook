@@ -6,7 +6,7 @@
 + vue scoped模块化css 只会影响vue创建的dom结构 
 完美解决办法为使用深度作用选择器： `>>>`或`/deep/`
 也可以使用全局css 即css不添加scoped
-+
++ slot（插槽）和provide/inject（提供/注入）一起使用实现组件间通讯？
 
 ### tslint && tsconfig
 `/ tslint:disable /——忽略该行以下所有代码出现的错误提示`
