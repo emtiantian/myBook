@@ -1,5 +1,7 @@
 ## linux常用命令  
+****
 ### vim  
+****
 `vim xx.conf`              
 >vim 打开文件  也可以作为新建
 
@@ -34,6 +36,7 @@
 >跳转到第n行    
 
 ### 文件相关
+****
 `stat`
 >显示文件详细修改信息
 
@@ -44,10 +47,12 @@
 >解压到程序压缩包到当前目录
 
 ### 查看系统版本
+****
 `lsb_release -a`
 >显示当前linux 的系统信息
 
 ### 测试端口是否联通
+****
 `nc -zv ip port`
 >测试当前ip对应端口tcp是否打开
 `nc -uzv ip port`
@@ -56,10 +61,12 @@
 >测试当前对应ip端口是否打开
 
 ### http访问
+****
 `curl -L http://xxxx`
 >curl执行时遇到跳转 加-L参数
 
 ### 定时任务
+****
 `crontab -e`
 >编辑命令或者执行命令脚本    
 
@@ -77,6 +84,7 @@
 ` 0 23 * * * /opt/gitlab/bin/gitlab-rake gitlab:backup:create >> /var/opt/gitlab/backups/backup.log 2>&1`
 
 ### 设置路由规则 
+****
 对双网卡上网的linux机器除了设置2个ip和一个网关外 还需要配置路由表
 命令有2种 net-tools系列 和 iproute2系列 推荐使用 iproute2 系列命令（linux发行版基本预装过）
  
@@ -95,6 +103,7 @@
 [ip route 高级设置](https://www.cnblogs.com/taosim/articles/4444887.html)
 
 ### 修改文件或文件夹权限
+****
 
 `chmod 777`
 >修改 第一个7:文件拥有者 第2个7:同组用户 第三个7:其他人访问权限   
@@ -104,6 +113,7 @@
 >第三个1：执行文件权限或进入文件夹权限
 
 ### 修改文件夹或文件拥有者
+****
 `chown`
 >修改文件或者文件夹的拥有者
 >chown -R admin /opt/nginx
@@ -120,6 +130,7 @@
 + 
 
 ### 查看硬盘使用情况和文件夹大小
+****
 
 #### 查看磁盘用量
 1. `df -lh `
@@ -131,18 +142,31 @@
 2. `du -s * | sort -nr  | head`  取前10个
 
 ### ssh 免密登录
+****
+#### 需要登录的机器：
+`ssh-keygen -t rsa -C "youremail@example.com"`    
+>生成ssh的key
 
-`scp ./id_rsa.pub root@A服务器ip:~/.ssh/id_rsa.pub_temp` 
->将生成的公钥文件id_rsa.pub复制到A服务器上，并改名（避免覆盖A服务器上的公钥）   
-     
-`cat id_rsa.pub_temp >> authorized_keys `
+`scp ./id_rsa.pub root@服务器ip:~/.ssh/id_rsa.pub_temp`    
+>将生成的公钥文件id_rsa.pub复制到A服务器上，并改名（避免覆盖A服务器上的公钥） 
+
+#### 目的机器中：
+`sudo - i`   
+>切换到管理员
+
+`cd .ssh`
+>进入ssh目录
+
+`cat id_rsa.pub_temp >> authorized_keys `   
 >将刚才复制过来的公钥信息追加到文件authorized_keys文件（追加的意义是避免覆盖其他公钥信息，如果没有这个文件系统会自动创建） 
 
 ### 查看进程及端口占用
+****
 1. `ps -ef | grep java` 查看进程占用
 2. `netstat –apn` 查看进程占用端口
 
 ### linux 重启
+****
 `shutdown -r 1`
 > 1分钟之后重启
 

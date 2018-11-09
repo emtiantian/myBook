@@ -7,6 +7,8 @@
 完美解决办法为使用深度作用选择器： `>>>`或`/deep/`
 也可以使用全局css 即css不添加scoped
 + slot（插槽）和provide/inject（提供/注入）一起使用实现组件间通讯？
++ render函数实质上是template 的实现方式，在自定义组件中可以使用render函数实现高级功能
++ 
 
 ### tslint && tsconfig
 `/ tslint:disable /——忽略该行以下所有代码出现的错误提示`
@@ -25,6 +27,9 @@
 + 组件边界
 + 
 
+### 展现相关
++ icon的使用
++ 绝对px,em,rem
 
 ### typescript
 1. `private num !: number` 这里`!:`表示这个变量是必须的
