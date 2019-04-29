@@ -1,4 +1,4 @@
-# HomeBrew常用命令
+# HomeBrew 常用命令
 
 ```brew
 // 搜索包
@@ -23,5 +23,3 @@ brew upgrade brew upgrade mysql
 brew cleanup brew cleanup mysql
 
 ```
-
-

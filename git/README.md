@@ -6,20 +6,20 @@
 
 ## `git commit -m`
 
->提交所有现在保存的索引 并添加改动说明
+> 提交所有现在保存的索引 并添加改动说明
 
 ## `git push origin master`
 
->提交到远程仓库
+> 提交到远程仓库
 
 ## `git clone git@github.com:emtiantian/xxxx.git`
 
->克隆远程文件到本地
+> 克隆远程文件到本地
 
 ## `git config --global core.autocrlf false`
 
->git 全局设置 git不对换行符做处理
+> git 全局设置 git 不对换行符做处理
 
 ## `git config --global core.safecrlf true`
 
->git 全局设置 git提交修改的时候不允许提交crlf
+> git 全局设置 git 提交修改的时候不允许提交 crlf
