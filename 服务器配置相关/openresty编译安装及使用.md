@@ -2,7 +2,7 @@
 
 ## openresty 简介
 
-- 个人描述:高级版 nginx(支持更多组件支持 lua 编程)
+- 个人描述:高级版 nginx(支持更多组件支持 lua 编程.
 - 官方描述
 
   > OpenResty® 是一个基于 Nginx 与 Lua 的高性能 Web 平台，其内部集成了大量精良的 Lua 库、第三方模块以及大多数的依赖项。用于方便地搭建能够处理超高并发、扩展性极高的动态 Web 应用、Web 服务和动态网关。  
@@ -24,21 +24,56 @@ nginx -s reload
 
 ## 安装过程
 
-1. 安装 yum（待王旭补充）
-   > `yum`
+1. 安装 yum
+   > `wget http://yum.baseurl.org/download/3.2/yum-3.2.28.tar.gz`  
+   > `tar xvf yum-3.2.28.tar.gz`  
+   > `cd yum-3.2.28`  
+   > `yummain.py install yum`
 2. 安装使用到的包
    > `yum install pcre-devel openssl-devel gcc curl`
-3. 下载源码并解压
-   > `wegt https://openresty.org/download/openresty-1.15.8.1rc1.tar.gz`  
-   > `tar -xzvf openresty-1.15.8.1rc1.tar.gz`
-4. 编译配置文件
+3. 安装 perl
 
+   ```bash
+   yum install perl* (yum安装perl相关支持)
+   yum install cpan (perl需要的程序库，需要cpan的支持，详细自行百度)
+   wget http://www.cpan.org/src/5.0/perl-5.16.1.tar.gz
+   tar -zxvf perl-5.16.1.tar.gz
+   ./Configure -des -Dprefix=/usr/local/perl
+   make
+   make test
+   make install
+   ```
+
+4. 下载源码并解压
+   > `wget https://openresty.org/download/openresty-1.15.8.1rc1.tar.gz` > `tar -xzvf openresty-1.15.8.1rc1.tar.gz`
+5. 编译配置文件
    > `cd openresty-1.15.8.1rc1/`  
    > `./configure //这一步完成后会输出安装位置及配置位置最好保存一下`
-
-5. 安装
+6. 手动创建目录
+   > `cd /usr/local`  
+   > `mkdir openresty`
+7. 安装
    > `make`  
    > `sudo make install`
+8. 上传静态文件(这里使用的是默认地址.
+   > `cd /opt/openresty/nginx/html`  
+   > `scp root@ip(使用各种方式上传文件到服务器)`
+9. 修改配置文件(这里使用的是默认地址.
+   > `cd /opt/openresty/nginx/conf`  
+   > `vi nginx.conf`
+10. 启动、测试、重启
+
+```bash
+#启动
+cd /opt/openresty/nginx/sbin/
+./nginx
+# 测试
+cd /opt/openresty/nginx/sbin/
+./nginx -t
+# 重启
+cd /opt/openresty/nginx/sbin/
+./nginx -s reload
+```
 
 ## 配置文件
 
@@ -127,4 +162,6 @@ http {
 
 [openresty 官方安装说明](http://openresty.org/cn/installation.html)  
 [常见错误及处理方式](http://moguhu.com/article/detail?articleId=54)  
-[yum 安装和更新源](https://www.cnblogs.com/kabi/p/5232420.html)
+[yum 安装和更新源](https://www.cnblogs.com/kabi/p/5232420.html)  
+[CentOS 下安装 yum](https://www.cnblogs.com/jukaiit/p/8877975.html)  
+[CENTOS 7 安装 perl 环境](https://blog.csdn.net/zhang6622056/article/details/52594242)
