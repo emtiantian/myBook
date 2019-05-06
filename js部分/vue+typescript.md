@@ -5,12 +5,11 @@
 - directive 和 $emit 的区别 是directive 是自定义真实dom的响应事件，$emit 是定义在虚拟中
 - vue 动态添加路由不能添加已有路由的子选项<span style="color: red">存疑</span>
 - vue 删除路由后 实际路由还在必须刷新页面才可以
-- vue scoped 模块化 css 只会影响 vue 创建的 dom 结构
-  完美解决办法为使用深度作用选择器： `>>>`或`/deep/`
+- vue scoped 模块化 css 只会影响 vue 创建的 dom 结构  
+  完美解决办法为使用深度作用选择器： `>>>`或`/deep/` 或者`::v-deep`
   也可以使用全局 css 即 css 不添加 scoped
 - slot（插槽）和 provide/inject（提供/注入）一起使用实现组件间通讯？
 - render 函数实质上是 template 的实现方式，在自定义组件中可以使用 render 函数实现高级功能
--
 
 ### tslint && tsconfig
 
@@ -43,29 +42,28 @@
 2. `private num ?: number` 这里`?:`表示这个变量不是是须的
 3. 忽略 ts 某些错误 `// @ts-ignore：`
 4. d.ts 文件只是一个解释文件不能参与运行所以其中的枚举值不能使用到 ts 文件中
-5.
 
 ### jwt
 
 1.  常用 payload 包含
 
-            {
-                "iss": "John Wu JWT",
-                "iat": 1441593502,
-                "exp": 1441594722,
-                "aud": "www.example.com",
-                "sub": "jrocket@example.com",
-                "from_user": "B",
-                "target_user": "A"
-            }
-            iss: 该JWT的签发者
-            sub: 该JWT所面向的用户
-            aud: 接收该JWT的一方
-            exp(expires): 什么时候过期，这里是一个Unix时间戳
-            iat(issued at): 在什么时候签发的
-            其他
-            jti token的唯一id ,防止重放攻击
-            nbf (Not Before)：如果当前时间在nbf里的时间之前，则Token不被接受；一般都会留一些余地，比如几分钟；，是否使用是可选的；
+        {
+            "iss": "John Wu JWT",
+            "iat": 1441593502,
+            "exp": 1441594722,
+            "aud": "www.example.com",
+            "sub": "jrocket@example.com",
+            "from_user": "B",
+            "target_user": "A"
+        }
+        iss: 该JWT的签发者
+        sub: 该JWT所面向的用户
+        aud: 接收该JWT的一方
+        exp(expires): 什么时候过期，这里是一个Unix时间戳
+        iat(issued at): 在什么时候签发的
+        其他
+        jti token的唯一id ,防止重放攻击
+        nbf (Not Before)：如果当前时间在nbf里的时间之前，则Token不被接受；一般都会留一些余地，比如几分钟；，是否使用是可选的；
 
 2.  登录功能可以做的很完善包括， passport 实现完整的第三方登录
 
