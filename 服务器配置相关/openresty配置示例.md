@@ -1,0 +1,41 @@
+# openresty配置示例
+
+```config
+server
+    {
+        #转发端口
+        listen port1;
+        #转发域名
+        server_name ip1;
+        #转发路径
+        location / {
+            #option转发控制
+            if ( $request_method = 'OPTIONS' ) {
+                add_header Access-Control-Allow-Origin $http_origin;
+                add_header Access-Control-Allow-Headers Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken,X-Data-Type,X-Requested-With,username;
+                add_header Access-Control-Allow-Methods GET,POST,OPTIONS,HEAD,PUT;
+                add_header Access-Control-Allow-Credentials true;
+                add_header Access-Control-Allow-Headers X-Data-Type,X-Auth-Token;
+                # 到底是206还是204
+                return 206;
+            }
+            if ( $request_method != 'OPTIONS' ) {
+                #add_header Access-Control-Allow-Origin $http_origin;
+                #add_header Access-Control-Allow-Credentials true;
+                more_set_headers   'Access-Control-Allow-Origin: $http_origin';
+                more_set_headers   'Access-Control-Allow-Credentials: true';
+            }
+            #转发头缓存大小
+            proxy_buffer_size 128k;
+            proxy_buffers   64 64k;
+            proxy_busy_buffers_size 256k;
+            #被转发ip，端口隐藏
+            proxy_redirect http://ip:port/ http://ip1:port1/;
+            #被转发地址
+            proxy_pass   http://ip:port/;
+            #try_files $uri $uri/ /index.html last;
+            }
+        #日志
+        access_log logs/show.log;
+    }
+```
