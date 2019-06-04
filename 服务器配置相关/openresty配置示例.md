@@ -25,6 +25,8 @@ server
                 more_set_headers   'Access-Control-Allow-Origin: $http_origin';
                 more_set_headers   'Access-Control-Allow-Credentials: true';
             }
+            #忽略转发头 iframe限制
+            proxy_hide_header X-Frame-Options;
             #转发头缓存大小
             proxy_buffer_size 128k;
             proxy_buffers   64 64k;
