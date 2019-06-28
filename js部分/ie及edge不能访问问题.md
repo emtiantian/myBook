@@ -41,7 +41,9 @@
    1. 打印语句未执行
 
    2. 控制台错误信息为
-      ![控制台错误信息](../assets/img/1561687072020.png)
+      ![控制台错误信息](https://github.com/emtiantian/myBook/blob/master/assets/img/1561687072020.png)
 
    3. 对应错误为"use strict";  行  "us 处出错
-      ![对应错误](../assets/img/1561687116354.png)
+      ![控制台错误信息](https://github.com/emtiantian/myBook/blob/master/assets/img/1561687116354.png)
+
+  ```
