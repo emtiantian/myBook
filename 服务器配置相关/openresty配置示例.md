@@ -1,4 +1,4 @@
-# openresty配置示例
+# openresty 配置示例
 
 ```config
 server
@@ -20,7 +20,9 @@ server
                 return 206;
             }
             if ( $request_method != 'OPTIONS' ) {
-                #add_header Access-Control-Allow-Origin $http_origin;
+                #如果响应代码等于200、201（1.3.10），204、206、301、302、303、304、307（1.1.16、1.0.13）或308（1.13），则将指定字段添加到响应标头。参数值可以包含变量。
+                # 如果添加always 则无论响应代码如何，都将添加头部字段。
+                #add_header Access-Control-Allow-Origin $http_origin always;
                 #add_header Access-Control-Allow-Credentials true;
                 more_set_headers   'Access-Control-Allow-Origin: $http_origin';
                 more_set_headers   'Access-Control-Allow-Credentials: true';

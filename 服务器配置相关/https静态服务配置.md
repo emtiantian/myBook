@@ -41,4 +41,41 @@
             }
         #日志
         #access_log logs/show.log;
-    }```
+    }
+    # nginx 转发ws协议
+    server
+    {
+        #转发端口
+        listen 22000;
+        #转发域名
+        server_name 10.0.2.71;
+        #转发路径
+        location /{
+            proxy_pass https://10.0.2.123:18080;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            }
+        #日志
+        #access_log logs/show.log;
+    }
+    # nginx支持多项目同域名部署 前端需要修改添加统一前缀 如authui
+    # vue工程中index.html静态文件引入加<%= BASE_URL %>
+    # vue.config.js中publicPath='/authui/'  router中添加base:'/authui/'
+    # nginx 创建 authui文件夹放置项目文件
+    server
+    {
+        #转发端口
+        listen 22000;
+        #转发域名
+        server_name 10.0.0.19;
+        #转发路径
+        location ^~ /authui {
+            root   html;
+            index  index.html index.htm;
+            try_files $uri $uri/ /authui/index.html last; # 配置地址原则是 root（基础地址） +/authui/index.html 为绝对地址
+            }
+        #日志
+        #access_log logs/show.log;
+    }
+    ```
