@@ -66,6 +66,10 @@
 
 > 远程传输本地文件到 linux 服务器
 
+`scp -P 1557 -i ~/.ssh/ziguang_rsa/10.0.54.183   -r ./dist/*  root@10.0.54.183:/home/uniudc/mes/bom/front`
+
+> -P 端口参数 -r 递归传输 -i 指定秘钥文件
+
 `tar -zxvf /tmp/etc.tar.gz`
 
 > 解压到程序压缩包到当前目录
@@ -231,3 +235,5 @@
 `shutdown -r 1`
 
 > 1 分钟之后重启
+
+
