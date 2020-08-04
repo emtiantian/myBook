@@ -135,6 +135,7 @@ http {
         access_log logs/show.log;
     }
     # 前端静态文件部署
+    # 如果vue前端有前缀 需要在vue.config.js 中设置pubilcPath,在router中设置base,在nginx root指定目录中创建对应名称文件夹,把前端文件放入其中
     server
     {
         #转发端口
