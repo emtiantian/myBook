@@ -5,3 +5,4 @@
 - docker 详细使用
 - unit 和 e2e 的使用
 - mock数据在项目内的使用
+- webpack 压缩的艺术，第三方提取，gzip，懒加载，压缩js，cdn，切分多个小js
