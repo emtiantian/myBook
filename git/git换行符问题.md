@@ -16,7 +16,7 @@ pass（这里的 pass 就是不通过的意思）
 到底咋用 我也不知道 [pass 到底啥意思](https://www.zhihu.com/question/27302256)
 
 最终解决办法是
-编译器不对代码做任何改动
+git不对代码做任何改动
 每次提交的时候拒绝提交包含 crlf 的代码
 git config --global core.autocrlf false
 git config --global core.safecrlf true
