@@ -10,4 +10,3 @@ cd my-project
 yarn # or npm install
 yarn run dev # or npm run dev
 ```
-
